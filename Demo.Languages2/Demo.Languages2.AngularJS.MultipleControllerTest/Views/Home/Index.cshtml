@@ -5,6 +5,7 @@
 @section Scripts{
 	<script src="~/Scripts/angular.js"></script>
 	<script src="~/Scripts/app.js"></script>
+	<script src="~/Scripts/app-outerCtrl.js"></script>
 	<script src="~/Scripts/directives/area1.js"></script>
 	<script src="~/Scripts/directives/area2.js"></script>
 
@@ -19,9 +20,11 @@
 
 }
 
-
 <h2>Index</h2>
 <div ng-app="app">
-	<area-one></area-one>
-	<area-two></area-two>
+	<div ng-controller="outerCtrl">
+		<span>{{testText}}</span>
+		<area-one></area-one>
+		<area-two></area-two>
+	</div>
 </div>
