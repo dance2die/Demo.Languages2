@@ -6,8 +6,22 @@
 	<script src="~/Scripts/angular.js"></script>
 	<script src="~/Scripts/app.js"></script>
 	<script src="~/Scripts/directives/area1.js"></script>
+	<script src="~/Scripts/directives/area2.js"></script>
+
+	<script>
+		// http://stackoverflow.com/a/34427511/4035
+		var myApp = myApp || {};
+		myApp.Urls = myApp.Urls || {};
+		myApp.Urls.baseUrl = '@Url.Content("~")';
+
+		var a = angular.module("app").value("appSettings", myApp);
+	</script>
+
 }
+
+
 <h2>Index</h2>
 <div ng-app="app">
 	<area-one></area-one>
+	<area-two></area-two>
 </div>
