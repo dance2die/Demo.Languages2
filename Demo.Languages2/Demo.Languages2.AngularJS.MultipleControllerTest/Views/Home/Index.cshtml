@@ -2,32 +2,12 @@
 @{
 	ViewBag.Title = "Index";
 }
-
-@section CSS{
-
-}
-
 @section Scripts{
-
 	<script src="~/Scripts/angular.js"></script>
 	<script src="~/Scripts/app.js"></script>
-	<script src="~/Scripts/app-outerCtrl.js"></script>
-	<script src="~/Scripts/app-mainCtrl.js"></script>
-	<script src="~/Scripts/app-secondCtrl.js"></script>
+	<script src="~/Scripts/directives/area1.js"></script>
 }
-
 <h2>Index</h2>
-
 <div ng-app="app">
-
-	<div ng-controller="outerCtrl">
-		<span>{{testText}}</span>
-
-		<div ng-controller="mainCtrl">
-			<button id="button1" ng-click="button1Click()">Button 1</button>
-		</div>
-		<div ng-controller="secondCtrl">
-			<button id="button2" ng-click="button2Click()">Button 2</button>
-		</div>
-	</div>
+	<area-one></area-one>
 </div>
