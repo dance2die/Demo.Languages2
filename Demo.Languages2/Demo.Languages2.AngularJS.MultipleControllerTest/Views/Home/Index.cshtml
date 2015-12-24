@@ -27,7 +27,19 @@
 <div ng-app="app">
 	<div ng-controller="outerCtrl">
 		<span>{{testText}}</span>
+		
+		@*http://www.codelord.net/2014/05/10/understanding-angulars-magic-dont-bind-to-primitives/*@
+		<div ng-repeat="item in items track by $index">
+			<input type="text" ng-model="items[$index]" />
+		</div>
+		@*<input type="text" ng-model="items[]" value="abc" />
+		<input type="text" ng-model="items[]" value="def" />
+		<input type="text" ng-model="items[]" value="ghi" />*@
+		<button ng-click="reverse(items)"></button>
+		<div id="reversedListResult"></div>
+
 		<area-one></area-one>
 		<area-two></area-two>
+
 	</div>
 </div>

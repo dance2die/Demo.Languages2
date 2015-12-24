@@ -5,3 +5,4 @@ function reverse(list) {
     }
     return reversedList;
 }
+//# sourceMappingURL=reverse.js.map
