@@ -22,9 +22,9 @@ module Shape {
 }
 
 module Program {
-	import Rectangle = Shape.Rectangle;
-	import IRectangle = Shape.IRectangle;
-	import BestCommonExampleClass = BestCommonExample.BestCommonExampleClass;
+	//import Rectangle = Shape.Rectangle;
+	//import IRectangle = Shape.IRectangle;
+	//import BestCommonExampleClass = BestCommonExample.BestCommonExampleClass;
 
 	function main() {
 		////toastr.info("This is a toastr");
@@ -33,8 +33,20 @@ module Program {
 		//var area: number = rect.getArea();
 		//toastr.info("area = " + area.toString());
 
-		var example1: BestCommonExampleClass = new BestCommonExampleClass();
-		example1.run();
+		//var example1: BestCommonExampleClass = new BestCommonExampleClass();
+		//example1.run();
+
+		var example2: Examples = new Examples();
+		example2.testWidenedType();
+	}
+
+	class Examples {
+		testWidenedType() {
+			function example() { return null; }
+
+			var widened = example();
+			console.log(typeof widened);
+		}
 	}
 
 	$(() =>{
