@@ -40,7 +40,13 @@ module Program {
 		example2.testWidenedType();
 	}
 
+	//declare class jQuery {
+	//	html(html: string): void;
+	//}
+	//declare function $(query: string) : jQuery;
+
 	class Examples {
+
 		testWidenedType() {
 			function example() { return null; }
 
