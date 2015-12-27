@@ -3,6 +3,7 @@
 /// <reference path="scripts/typings/angularjs/angular-resource.d.ts" />
 /// <reference path="scripts/typings/toastr/toastr.d.ts" />
 /// <reference path="scripts/bestcommontype.ts" />
+/// <reference path="scripts/polymorphism.ts" />
 
 module Shape {
 	export interface IRectangle {
@@ -22,6 +23,10 @@ module Shape {
 }
 
 module Program {
+	import Runner = Polymorphism.Runner;
+	import SportsCar = Polymorphism.SportsCar;
+	import Airplane = Polymorphism.Airplane;
+
 	//import Rectangle = Shape.Rectangle;
 	//import IRectangle = Shape.IRectangle;
 	//import BestCommonExampleClass = BestCommonExample.BestCommonExampleClass;
@@ -37,7 +42,8 @@ module Program {
 		//example1.run();
 
 		var example2: Examples = new Examples();
-		example2.testWidenedType();
+		//example2.testWidenedType();
+		example2.testPolymorphism();
 	}
 
 	//declare class jQuery {
@@ -52,6 +58,12 @@ module Program {
 
 			var widened = example();
 			console.log(typeof widened);
+		}
+
+		testPolymorphism() {
+			var runner: Polymorphism.Runner = new Runner();
+			runner.navigate(new SportsCar());
+			runner.navigate(new Airplane());
 		}
 	}
 
