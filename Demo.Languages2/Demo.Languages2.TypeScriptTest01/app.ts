@@ -26,24 +26,21 @@ module Program {
 	import Runner = Polymorphism.Runner;
 	import SportsCar = Polymorphism.SportsCar;
 	import Airplane = Polymorphism.Airplane;
-
-	//import Rectangle = Shape.Rectangle;
-	//import IRectangle = Shape.IRectangle;
-	//import BestCommonExampleClass = BestCommonExample.BestCommonExampleClass;
+	import Rectangle = Shape.Rectangle;
+	import BestCommonExampleClass = BestCommonExample.BestCommonExampleClass;
 
 	function main() {
 		////toastr.info("This is a toastr");
 
-		//var rect: IRectangle = new Rectangle(10, 4);
-		//var area: number = rect.getArea();
-		//toastr.info("area = " + area.toString());
+		var rect: Rectangle = new Rectangle(10, 4);
+		var area: number = rect.getArea();
+		toastr.info("area = " + area.toString());
 
-		//var example1: BestCommonExampleClass = new BestCommonExampleClass();
-		//example1.run();
+		var example: Examples = new Examples();
+		example.testBestCommonType();
 
-		var example2: Examples = new Examples();
-		//example2.testWidenedType();
-		example2.testPolymorphism();
+		//example.testWidenedType();
+		example.testPolymorphism();
 	}
 
 	//declare class jQuery {
@@ -52,6 +49,27 @@ module Program {
 	//declare function $(query: string) : jQuery;
 
 	class Examples {
+
+		testBestCommonType() {
+			var bestCommonTypeExample = [
+				{ a: 'A', b: 1, c: true },
+				{ a: 'B', b: 2 },
+				{ b: 3 }
+			];
+
+			for (var i = 0; i < bestCommonTypeExample.length; i++) {
+				var value = bestCommonTypeExample[i];
+
+				// The property 'a' does not exist on value of type '{ b: number }'.
+				//console.log(value.a);
+
+				// OK
+				console.log(value.b);
+
+				// The property 'c' does not exist on value of type '{ b: number }'.
+				//console.log(value.c);
+			}
+		}
 
 		testWidenedType() {
 			function example() { return null; }
