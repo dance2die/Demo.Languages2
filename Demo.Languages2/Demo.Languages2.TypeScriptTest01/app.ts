@@ -36,15 +36,26 @@ module Program {
 		toastr.info("area = " + area.toString());
 
 		var example: Examples = new Examples();
-		example.testBestCommonType();
-		example.testWidenedType();
-		example.testPolymorphism();
+		//example.testBestCommonType();
+		//example.testWidenedType();
+		//example.testPolymorphism();
+		example.testTypeConstraint();
 	}
 
 	//declare class jQuery {
 	//	html(html: string): void;
 	//}
 	//declare function $(query: string) : jQuery;
+
+	export interface HasName {
+		name: string;
+	}
+
+	export class Personalization {
+		static greet<T extends HasName>(obj: T) {
+			return 'Hello ' + obj.name;
+		}
+	}
 
 	class Examples {
 
@@ -67,6 +78,10 @@ module Program {
 				// The property 'c' does not exist on value of type '{ b: number }'.
 				//console.log(value.c);
 			}
+		}
+
+		testTypeConstraint() {
+			console.log(Personalization.greet({ name: "Mike" }));
 		}
 
 		testWidenedType() {
