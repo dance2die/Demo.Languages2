@@ -27,7 +27,6 @@ module Program {
 	import SportsCar = Polymorphism.SportsCar;
 	import Airplane = Polymorphism.Airplane;
 	import Rectangle = Shape.Rectangle;
-	import BestCommonExampleClass = BestCommonExample.BestCommonExampleClass;
 
 	function main() {
 		////toastr.info("This is a toastr");
@@ -38,8 +37,7 @@ module Program {
 
 		var example: Examples = new Examples();
 		example.testBestCommonType();
-
-		//example.testWidenedType();
+		example.testWidenedType();
 		example.testPolymorphism();
 	}
 
