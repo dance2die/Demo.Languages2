@@ -12,7 +12,11 @@
 			exports: "$"
 		}
 	},
-	waitSeconds: 0
+	waitSeconds: 0,
+	deps: ["config"],
+	callback: function(config) {
+		alert("config loaded " + config.githubUrl);
+	}
 });
 
 
