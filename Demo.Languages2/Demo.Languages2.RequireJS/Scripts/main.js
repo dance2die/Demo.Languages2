@@ -43,8 +43,8 @@ define("task1", function(require, exports, module) {
 });
 
 
-require(["task1"], function(task1) {
-	task1.alert1("Hello RequireJS World!!!");
+require(["task1", "config"], function (task1, config) {
+	task1.alert1(config.msg + " from " + config.githubUrl);
 });
 
 
