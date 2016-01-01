@@ -1,4 +1,5 @@
 ﻿require.config({
+	baseUrl: "Scripts/",
 	paths: {
 		jquery: "jquery-2.1.4.min",
 		toastr: "toastr.min"
