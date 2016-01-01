@@ -16,7 +16,8 @@
 	deps: ["config"],
 	callback: function(config) {
 		alert("config loaded " + config.githubUrl);
-	}
+	},
+	urlArgs: "bust=" + (new Date()).getTime()
 });
 
 
