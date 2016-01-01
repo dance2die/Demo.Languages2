@@ -21,22 +21,6 @@
 	urlArgs: "bust=" + (new Date()).getTime()
 });
 
-
-// "task1" using AMD (Asynchronous Module Declaration) syntax
-//define("task1", ["toastr"], function (toastr) {
-//	"use strict";
-
-//	function alert1(msg) {
-//		//alert(msg);
-//		toastr.info(msg);
-//	}
-
-//	return{
-//		alert1: alert1
-//	}
-//});
-
-
 require(["task1", "config"], function (task1, config) {
 	task1.alert1(config.msg + " from " + config.githubUrl);
 });
