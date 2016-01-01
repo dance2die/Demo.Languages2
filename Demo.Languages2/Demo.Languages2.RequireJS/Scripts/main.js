@@ -11,7 +11,8 @@
 		jquery: {
 			exports: "$"
 		}
-	}
+	},
+	waitSeconds: 0
 });
 
 
