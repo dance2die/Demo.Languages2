@@ -3,6 +3,14 @@
 	paths: {
 		jquery: "jquery-2.1.4.min",
 		toastr: "toastr.min"
+	},
+	shim : {
+		underscore : {
+			exports: "_"
+		},
+		jquery: {
+			exports: "$"
+		}
 	}
 });
 
@@ -24,11 +32,13 @@
 
 // "task1" defined using CommonJS syntax
 define("task1", function(require, exports, module) {
-	var $ = require("jquery");
+	//var $ = require("jquery");
 	var toastr = require('toastr');
 
-	exports.alert1 = function(msg) {
-		toastr.info(msg);
+	exports.alert1 = function (msg) {
+		$.each([1, 2, 3], function(index, value) {
+			toastr.info(msg + " " + value.toString());
+		});
 	}
 });
 
