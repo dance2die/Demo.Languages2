@@ -3,7 +3,8 @@
 	paths: {
 		jquery: "jquery-2.1.4.min",
 		toastr: "toastr.min",
-		task1: "tasks/task1"
+		task1: "tasks/task1",
+		templates: "../Templates"
 	},
 	shim : {
 		underscore : {
@@ -21,8 +22,9 @@
 	urlArgs: "bust=" + (new Date()).getTime()
 });
 
-require(["task1", "config"], function (task1, config) {
-	task1.alert1(config.msg + " from " + config.githubUrl);
+require(["task1", "config", "text!templates/taskTemplate.html"], function (task1, config, taskTemplate) {
+	//task1.alert1(config.msg + " from " + config.githubUrl);
+	task1.alert1(taskTemplate);
 });
 
 
