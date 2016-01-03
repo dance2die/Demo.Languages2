@@ -4,13 +4,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+	<title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
+	<form id="form1" runat="server">
+		<div>
+			<button id="newButton">New</button>
+			<button id="deleteButton">Delete</button>
+			<button id="saveButton">Save</button>
+			<button id="cancelButton">Cancel</button>
+		</div>
+	</form>
+	
+	<script src="js/app.bundle.js"></script>
 </body>
 </html>
