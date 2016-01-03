@@ -33,6 +33,7 @@ function registerEventHanlders() {
 
 registerEventHanlders();
 tasks.render();
+alert("changed");
 },{"./tasks":4,"jquery":5}],2:[function(require,module,exports){
 "use strict";
 

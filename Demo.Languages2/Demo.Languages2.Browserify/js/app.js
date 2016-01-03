@@ -32,3 +32,4 @@ function registerEventHanlders() {
 
 registerEventHanlders();
 tasks.render();
+alert("changed");
