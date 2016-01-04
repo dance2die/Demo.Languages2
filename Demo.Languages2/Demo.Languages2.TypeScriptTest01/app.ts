@@ -5,22 +5,22 @@
 /// <reference path="scripts/bestcommontype.ts" />
 /// <reference path="scripts/polymorphism.ts" />
 
-module Shape {
-	export interface IRectangle {
-		width: number;
-		height: number;
-		getArea(): number;
-	}
+//module Shape {
+//	export interface IRectangle {
+//		width: number;
+//		height: number;
+//		getArea(): number;
+//	}
 
-	export class Rectangle implements IRectangle {
-		constructor(public width: number, public height: number) {
-		}
+//	export class Rectangle implements IRectangle {
+//		constructor(public width: number, public height: number) {
+//		}
 
-		getArea(): number {
-			return this.width * this.height;
-		}
-	}
-}
+//		getArea(): number {
+//			return this.width * this.height;
+//		}
+//	}
+//}
 
 module Program {
 	import Runner = Polymorphism.Runner;
