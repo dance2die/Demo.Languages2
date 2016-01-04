@@ -1,4 +1,4 @@
-﻿module Shape {
+﻿export module Shape {
 	export interface IRectangle {
 		width: number;
 		height: number;

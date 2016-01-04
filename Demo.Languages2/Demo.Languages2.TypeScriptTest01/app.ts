@@ -21,12 +21,13 @@
 //		}
 //	}
 //}
+import Shape1 = require("Scripts/Shape");
 
 module Program {
 	import Runner = Polymorphism.Runner;
 	import SportsCar = Polymorphism.SportsCar;
 	import Airplane = Polymorphism.Airplane;
-	import Rectangle = Shape.Rectangle;
+	import Rectangle = Shape1.Shape.Rectangle;
 
 	function main() {
 		////toastr.info("This is a toastr");
