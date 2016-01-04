@@ -1,5 +1,4 @@
 ﻿/// <reference path="typings/requirejs/require.d.ts" />
-
 require.config({
 	baseUrl: "Scripts/",
 	paths: {
@@ -25,6 +24,7 @@ require.config({
 //	app2.Runner.run();
 //});
 
-require(["app2"], app2 => {
-	//app2.Runner.run();
+require(["app2"], (app2) => {
+	var runner = new app2.Runner();
+	runner.run();
 });

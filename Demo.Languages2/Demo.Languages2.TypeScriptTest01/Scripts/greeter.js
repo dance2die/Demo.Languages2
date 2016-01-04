@@ -18,4 +18,4 @@ define(["require", "exports", "jquery"], function (require, exports, $) {
     })();
     exports.Greeter = Greeter;
 });
-//# sourceMappingURL=Greeter.js.map
+//# sourceMappingURL=greeter.js.map
