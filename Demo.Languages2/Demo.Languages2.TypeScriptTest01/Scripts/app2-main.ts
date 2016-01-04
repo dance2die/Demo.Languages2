@@ -6,6 +6,7 @@ require.config({
 		jquery: "jquery-2.1.4.min",
 		toastr: "toastr.min",
 		polymorphism: "Polymorphism"
+		//app2: "app2
 	},
 	shim: {
 		underscore: {
@@ -20,7 +21,10 @@ require.config({
 });
 
 
-require(["app2"], (app2) => {
-	app2.Runner.run();
-});
+//require(["app2"], (app2) => {
+//	app2.Runner.run();
+//});
 
+require(["app2"], function(app2) {
+	//console.log(app2);
+});
