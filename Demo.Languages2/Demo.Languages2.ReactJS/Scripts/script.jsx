@@ -12,4 +12,23 @@
 	}
 });
 
-React.render(<Button />, document.getElementById("root"));
+var Result = React.createClass({
+	render: function() {
+		return (
+			<div>XXX</div>
+		);
+	}
+});
+
+var Main = React.createClass({
+	render: function() {
+		return (
+			<div>
+				<Button></Button>
+				<Result></Result>
+			</div>
+		);
+	}
+});
+
+React.render(<Main />, document.getElementById("root"));
