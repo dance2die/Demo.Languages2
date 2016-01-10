@@ -4,8 +4,11 @@
 	},
 	render: function() {
 		return (
-			<button>{this.state.counter}</button>
+			<button onClick={this.handleClick}>{this.state.counter}</button>
 		);
+	},
+	handleClick: function() {
+		this.setState({ counter: this.state.counter + 1 });
 	}
 });
 
