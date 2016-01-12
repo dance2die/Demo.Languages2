@@ -1,18 +1,26 @@
-/// <reference path="../scripts/typings/requirejs/require.d.ts" />
-var config = {
-    paths: {
-        jquery: "../Scripts/jquery-2.1.4.min",
-        toastr: "../Scripts/toastr.min"
-    },
-    shim: {
-        jquery: {
-            exports: "$"
-        }
-    },
-    waitSeconds: 0
-};
-require.config(config);
-require(["toastr"], function (toastr) {
-    toastr.info("Hello world");
+require.config({
+	paths: {
+		jquery: "../Scripts/jquery-2.1.4.min",
+		toastr: "../Scripts/toastr.min",
+		angular: "../Scripts/angular.min"
+	},
+	shim: {
+		jquery: {
+			exports: "$"
+		},
+		angular: {
+			exports: "angular"
+		}
+	},
+	waitSeconds: 0
 });
-//# sourceMappingURL=main.js.map
+
+//import app = require("app");
+
+
+require(["toastr", "app"], function(toastr, app) {
+	toastr.info("Hello world");
+
+	var angularBootstrap = new app.AngularBootstrap();
+	angularBootstrap.runAngular();
+});
