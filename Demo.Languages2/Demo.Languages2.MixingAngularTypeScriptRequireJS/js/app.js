@@ -1,12 +1,14 @@
-define(["require", "exports"], function (require, exports) {
-    /// <reference path="../scripts/typings/angularjs/angular.d.ts" />
+define(["require", "exports", "angular", "toastr"], function (require, exports, angular, toastr) {
     var AngularBootstrap = (function () {
         function AngularBootstrap() {
         }
-        AngularBootstrap.prototype.runAngular = function () {
+        AngularBootstrap.prototype.init = function () {
             angular.module("app", [])
-                .controller("mainCtrl", ["$scope", function ($scope) {
-                    $scope.result = "this is a result from AngularJS";
+                .controller("mainCtrl", ["$scope", "$timeout", function ($scope, $timeout) {
+                    $timeout(function () {
+                        $scope.result = "this is a result from AngularJS";
+                        toastr.info($scope.result);
+                    });
                 }]);
         };
         return AngularBootstrap;

@@ -15,7 +15,8 @@
 		</div>
 	</form>
 	
-	<div id="result" ng-model="result"></div>
+	<textarea id="result" rows="4" cols="50" ng-model="result"></textarea>
+	
 	
 	<script src="Scripts/require.js" data-main="js/main.js"></script>
 </body>

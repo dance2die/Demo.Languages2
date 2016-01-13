@@ -22,5 +22,5 @@ require(["toastr", "app"], function(toastr, app) {
 	toastr.info("Hello world");
 
 	var angularBootstrap = new app.AngularBootstrap();
-	angularBootstrap.runAngular();
+	angularBootstrap.init();
 });
