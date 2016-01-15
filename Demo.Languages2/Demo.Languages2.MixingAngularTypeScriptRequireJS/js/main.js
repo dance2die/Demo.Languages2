@@ -28,4 +28,22 @@ require(["toastr", "app", "alertify"], function (toastr, app, alertify) {
 	alertify.log("alertify.log");
 	alertify.success("Saved successfully.");
 	alertify.error("Error notification");
+
+	// custom OK and Cancel label
+	// default: OK, Cancel
+	alertify.set({
+		labels: {
+			ok: "Accept",
+			cancel: "Deny"
+		},
+		buttonReverse: true
+	});
+	// button labels will be "Accept" and "Deny"
+	alertify.confirm("Message", function (e) {
+		if (e) {
+			alertify.log("Clicked on 'Accept'");
+		} else {
+			alertify.error("Clicked on 'Deny'");
+		}
+	});
 });
