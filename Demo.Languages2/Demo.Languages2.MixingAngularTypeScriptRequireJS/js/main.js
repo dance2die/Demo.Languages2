@@ -38,12 +38,21 @@ require(["toastr", "app", "alertify"], function (toastr, app, alertify) {
 		},
 		buttonReverse: true
 	});
-	// button labels will be "Accept" and "Deny"
-	alertify.confirm("Message", function (e) {
+	//// button labels will be "Accept" and "Deny"
+	//alertify.confirm("Message", function (e) {
+	//	if (e) {
+	//		alertify.log("Clicked on 'Accept'");
+	//	} else {
+	//		alertify.error("Clicked on 'Deny'");
+	//	}
+	//});
+
+	alertify.prompt("Message", function (e, input) {
+		// str is the input text
 		if (e) {
-			alertify.log("Clicked on 'Accept'");
+			alertify.log('Entered : "' + input + '"');
 		} else {
 			alertify.error("Clicked on 'Deny'");
 		}
-	});
+	}, "Default Value xxx");
 });
