@@ -20,11 +20,17 @@
 });
 
 var Main = React.createClass({
+	getInitialState: function() {
+		return { logins: ["dance2die", "zpao", "petehunt"] };
+	},
 	render: function () {
+		var cards = this.state.logins.map(function(login) {
+			return (<Card login={login} />);
+		});
+
 		return (
 			<div>
-				<Card login="dance2die" />
-				<Card login="petehunt" />
+				{cards}
 			</div>
 		);
 	}
