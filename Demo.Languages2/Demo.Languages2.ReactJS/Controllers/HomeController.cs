@@ -13,5 +13,10 @@ namespace Demo.Languages2.ReactJS.Controllers
 		{
 			return View();
 		}
+
+		public ActionResult Card()
+		{
+			return View();
+		}
 	}
 }
