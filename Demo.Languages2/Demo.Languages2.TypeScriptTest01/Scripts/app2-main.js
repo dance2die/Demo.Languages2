@@ -24,6 +24,7 @@ require(["app2", "scopeTest"], function (app2, scopeTest) {
     //runner.run();
     var runner2 = new scopeTest.scopeTestRunner();
     //runner2.scopeTest1();
-    runner2.scopeTest2();
+    //runner2.scopeTest2();
+    runner2.scopeTest3();
 });
 //# sourceMappingURL=app2-main.js.map

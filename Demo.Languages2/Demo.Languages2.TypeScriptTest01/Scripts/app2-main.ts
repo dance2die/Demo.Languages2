@@ -26,5 +26,6 @@ require(["app2", "scopeTest"], (app2, scopeTest) => {
 
 	var runner2 = new scopeTest.scopeTestRunner();
 	//runner2.scopeTest1();
-	runner2.scopeTest2();
+	//runner2.scopeTest2();
+	runner2.scopeTest3();
 });

@@ -19,6 +19,14 @@ define(["require", "exports", "toastr"], function (require, exports, toastr) {
             })();
             toastr.info("Outter: " + scope);
         };
+        scopeTestRunner.prototype.scopeTest3 = function () {
+            var scope = 1;
+            {
+                var scope_1 = 2;
+                toastr.info("Inner: " + scope_1);
+            }
+            toastr.info("Outter: " + scope);
+        };
         return scopeTestRunner;
     })();
     exports.scopeTestRunner = scopeTestRunner;

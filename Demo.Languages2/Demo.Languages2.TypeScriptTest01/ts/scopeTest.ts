@@ -24,4 +24,15 @@ export class scopeTestRunner {
 
 		toastr.info("Outter: " + scope);
 	}
+
+	scopeTest3() {
+		var scope = 1;
+
+		{
+			let scope = 2;
+			toastr.info("Inner: " + scope);
+		}
+
+		toastr.info("Outter: " + scope);
+	}
 }
