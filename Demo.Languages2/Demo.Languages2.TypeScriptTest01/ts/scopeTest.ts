@@ -3,13 +3,24 @@
 import toastr = require("toastr");
 
 export class scopeTestRunner {
-	run() {
+	scopeTest1() {
 		var scope = 1;
 
 		{
 			var scope = 2;
 			toastr.info("Inner: " + scope);
 		}
+
+		toastr.info("Outter: " + scope);
+	}
+
+	scopeTest2() {
+		var scope = 1;
+
+		(() => {
+			var scope = 2;
+			toastr.info("Inner: " + scope);
+		})();
 
 		toastr.info("Outter: " + scope);
 	}
