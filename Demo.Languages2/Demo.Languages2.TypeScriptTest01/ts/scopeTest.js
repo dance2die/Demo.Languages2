@@ -31,4 +31,4 @@ define(["require", "exports", "toastr"], function (require, exports, toastr) {
     })();
     exports.scopeTestRunner = scopeTestRunner;
 });
-//# sourceMappingURL=scopeTest.js.map
+//# sourceMappingURL=scopetest.js.map

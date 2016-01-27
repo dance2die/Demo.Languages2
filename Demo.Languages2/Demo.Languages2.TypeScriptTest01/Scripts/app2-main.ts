@@ -1,4 +1,7 @@
 ﻿/// <reference path="typings/requirejs/require.d.ts" />
+/// <reference path="../ts/scopetest.ts" />
+/// <reference path="../ts/runtimetest.ts" />
+
 require.config({
 	baseUrl: "Scripts/",
 	paths: {
@@ -6,7 +9,8 @@ require.config({
 		toastr: "toastr.min",
 		polymorphism: "Polymorphism",
 		app2: "app2",
-		scopeTest: "../ts/scopeTest"
+		scopeTest: "../ts/scopeTest",
+		runtimeTest: "../ts/runtimeTest"
 	},
 	shim: {
 		underscore: {
@@ -20,12 +24,15 @@ require.config({
 	urlArgs: "bust=" + (new Date()).getTime()
 });
 
-require(["app2", "scopeTest"], (app2, scopeTest) => {
+require(["app2", "scopeTest", "runtimeTest"], (app2, scopeTest, runtimeTest) => {
 	//var runner = new app2.Runner();
 	//runner.run();
 
 	var runner2 = new scopeTest.scopeTestRunner();
 	//runner2.scopeTest1();
 	//runner2.scopeTest2();
-	runner2.scopeTest3();
+	//runner2.scopeTest3();
+
+	var runtimeTestRunner = new runtimeTest.runtimeTestRunner();
+	runtimeTestRunner.test1();
 });
