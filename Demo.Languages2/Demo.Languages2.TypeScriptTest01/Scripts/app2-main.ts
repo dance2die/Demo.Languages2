@@ -1,6 +1,7 @@
 ﻿/// <reference path="typings/requirejs/require.d.ts" />
 /// <reference path="../ts/scopetest.ts" />
 /// <reference path="../ts/runtimetest.ts" />
+/// <reference path="../ts/loggertest.ts" />
 
 require.config({
 	baseUrl: "Scripts/",
@@ -10,7 +11,8 @@ require.config({
 		polymorphism: "Polymorphism",
 		app2: "app2",
 		scopeTest: "../ts/scopeTest",
-		runtimeTest: "../ts/runtimeTest"
+		runtimeTest: "../ts/runtimeTest",
+		loggerTest: "../ts/loggerTest"
 	},
 	shim: {
 		underscore: {
@@ -24,7 +26,7 @@ require.config({
 	urlArgs: "bust=" + (new Date()).getTime()
 });
 
-require(["app2", "scopeTest", "runtimeTest"], (app2, scopeTest, runtimeTest) => {
+require(["app2", "scopeTest", "runtimeTest", "loggerTest"], (app2, scopeTest, runtimeTest, loggerTest) => {
 	//var runner = new app2.Runner();
 	//runner.run();
 
@@ -34,5 +36,8 @@ require(["app2", "scopeTest", "runtimeTest"], (app2, scopeTest, runtimeTest) => 
 	//runner2.scopeTest3();
 
 	var runtimeTestRunner = new runtimeTest.runtimeTestRunner();
-	runtimeTestRunner.test1();
+	//runtimeTestRunner.test1();
+
+	var clickLogger = new loggerTest.ClickLogger();
+	//clickLogger.wireEvents();
 });

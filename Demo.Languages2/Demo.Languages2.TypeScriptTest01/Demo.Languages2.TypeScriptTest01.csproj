@@ -397,6 +397,7 @@
     <Content Include="Scripts\Shape.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
+    <Content Include="ts\loggerTest.js" />
     <Content Include="ts\runtimeTest.js" />
     <Content Include="ts\scopeTest.js" />
     <Content Include="web.config" />
@@ -419,6 +420,7 @@
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\requirejs\require.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\toastr\toastr.d.ts" />
+    <TypeScriptCompile Include="ts\loggerTest.ts" />
     <TypeScriptCompile Include="ts\runtimeTest.ts" />
     <TypeScriptCompile Include="ts\scopeTest.ts" />
   </ItemGroup>
@@ -431,6 +433,7 @@
     <Content Include="Scripts\Shape.js.map" />
     <Content Include="ts\scopeTest.js.map" />
     <Content Include="ts\runtimeTest.js.map" />
+    <Content Include="ts\loggerTest.js.map" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
