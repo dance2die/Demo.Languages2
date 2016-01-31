@@ -1,8 +1,10 @@
 ﻿require.config({
 	baseUrl: "Scripts/",
 	paths: {
-		jquery: "jquery-2.2.0.min",
-		alertify: "alertify/alertify.min"
+		jquery: "jquery-2.1.4.min",
+		alertify: "alertify/alertify.min",
+		task1: "tasks/task1",
+		bootstrap: "bootstrap.min"
 	},
 	shim: {
 		jquery: {
@@ -11,10 +13,9 @@
 	}
 });
 
-require([], function () {
-	//alertify.info("Hello Chapter03-main.js!");
-	$.each([1, 2, 3], function(index, value) {
-		console.log("index = " + index + "; value = " + value);
-	});
+require(["task1"], function (task1) {
+	task1.alert1();
+	//console.log("bootstrap.length = " + bootstrap.length);
 });
+
 
