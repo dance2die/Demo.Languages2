@@ -159,6 +159,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="hello-react.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -211,6 +212,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Card.cshtml" />
     <Content Include="Views\Home\Game.cshtml" />
+    <Content Include="Scripts\jsx\hello-react.jsx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
