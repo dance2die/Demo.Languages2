@@ -209,6 +209,7 @@
     <Content Include="Views\Home\Card.cshtml" />
     <Content Include="Views\Home\Game.cshtml" />
     <Content Include="Scripts\jsx\hello-react.jsx" />
+    <Content Include="Scripts\jsx\stateless-test.jsx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
