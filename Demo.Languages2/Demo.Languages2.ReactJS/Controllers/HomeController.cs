@@ -18,5 +18,10 @@ namespace Demo.Languages2.ReactJS.Controllers
 		{
 			return View();
 		}
+
+		public ActionResult StateLess()
+		{
+			return View();
+		}
 	}
 }
